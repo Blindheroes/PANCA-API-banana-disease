@@ -20,15 +20,14 @@ app.add_middleware(
 # Load the model with tf.saved_model.load
 MODEL = tf.saved_model.load("model")
 
-CLASS_NAMES = [
-    'Banana Black Sigatoka Disease',
-    'Banana Bract Mosaic Virus Disease',
-    'Banana Healthy Leaf',
-    'Banana Insect Pest Disease',
-    'Banana Moko Disease',
-    'Banana Panama Disease',
-    'Banana Yellow Sigatoka Disease'
-]
+CLASS_NAMES = ['Banana Black Sigatoka Disease',
+               'Banana Bract Mosaic Virus Disease',
+               'Banana Healthy Leaf',
+               'Banana Insect Pest Disease',
+               'Banana Moko Disease',
+               'Banana Panama Disease',
+               'Banana Yellow Sigatoka Disease',
+               'LAYU FUSARIUM']
 
 
 @app.get("/")
@@ -101,4 +100,4 @@ async def predict(
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host='0.0.0.0', port=8000)
+    uvicorn.run(app, host='0.0.0.0', port=443)
